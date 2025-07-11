@@ -23,13 +23,6 @@ const ExpenseSummary = ({ total }) => {
     }
   }, [total, shouldAnimate]);
 
-  // Inicializa el contenido del <p> en 0 para que la animación sea visible
-  useEffect(() => {
-    if (amountRef.current) {
-      amountRef.current.textContent = "$0.00";
-    }
-    setShouldAnimate(false); // Reinicia la animación cada vez que cambia el total
-  }, [total]);
 
   return (
     <motion.div
@@ -46,7 +39,7 @@ const ExpenseSummary = ({ total }) => {
           ref={amountRef}
           style={{ fontSize: "1.5rem", color: "white" }}
         >
-          {/* El valor inicial lo pone el useEffect */}
+          {total ? `$${total.toFixed(2)}` : "$0.00"}
         </p>
       </div>
       <div className="total-gastado-discover">
