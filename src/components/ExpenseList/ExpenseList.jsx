@@ -6,6 +6,15 @@ import { useState } from "react";
 const ExpenseList = ({ expenses, onDelete }) => {
     const [showItems, setShowItems] = useState(false);
 
+    // Obtener mes y año actual
+    const now = new Date();
+    const meses = [
+        "Ene", "Feb", "Mar", "Abr", "May", "Jun",
+        "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"
+    ];
+    const mesActual = meses[now.getMonth()];
+    const añoActual = now.getFullYear();
+
     return (
         <motion.ul
             className="chill2-list"
@@ -15,9 +24,9 @@ const ExpenseList = ({ expenses, onDelete }) => {
             onAnimationComplete={() => setShowItems(true)}
         >
             <div className="expenses-header">
-                <h2 className="expenses-title">Jul</h2>
-                <h3 className="expenses-title">2025</h3>
-                <p className="expenses-date">Julio 2025</p>
+                <h2 className="expenses-title">{mesActual}</h2>
+                <h3 className="expenses-title">{añoActual}</h3>
+                <p className="expenses-date">{`${meses[now.getMonth()]} ${añoActual}`}</p>
                 <p className="expenses-subtitle">Minimalism style</p>
             </div>
             <AnimatePresence>
