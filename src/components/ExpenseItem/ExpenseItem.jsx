@@ -11,7 +11,7 @@ const ExpenseItem = ({ description, amount, date, onDelete, id }) => {
             transition={{ duration: 0.25 }}
         >
             <span>
-                {description} - ${amount} en {date}
+                {description} gastates ${amount} El {date}
             </span>
             <button className="delete-btn" onClick={() => onDelete(id)}>❌</button>
         </motion.li>
