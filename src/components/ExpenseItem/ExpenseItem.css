@@ -1,0 +1,31 @@
+.expense-item {
+  background-color: #0f172a;            /* Azul muy oscuro para contraste */
+  color: #f1f5f9;                        /* Texto claro */
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.expense-item:hover {
+  background-color: #1e293b;            /* Ligero cambio al pasar el mouse */
+}
+
+.expense-item .delete-btn {
+  background-color: transparent;
+  color: #f87171;                        /* Rojo suave */
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.expense-item .delete-btn:hover {
+  transform: scale(1.15);
+  color: #ef4444;                        /* Rojo más intenso al pasar */
+}

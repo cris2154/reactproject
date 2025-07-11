@@ -1,0 +1,53 @@
+/* Contenedor principal del resumen de gastos */
+.expense-summary-container {
+  background-color: #111827;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: white;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  height: 150px;
+  width: 480px;           /* ✅ Ancho deseado */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  top: 35px; /* Ajusta la posición vertical */
+}
+
+/* Contenido interno alineado a la izquierda */
+.expense-summary-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Título del resumen */
+.expense-summary-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #d1d5db;
+  margin: 0 0 0.25rem 0;
+}
+
+/* Monto total gastado */
+.expense-summary-amount {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* Contenedor alineado a la derecha (opcional) */
+.expense-summary-discover {
+  text-align: right;
+}
+
+/* Texto complementario */
+.expense-summary-discover-text {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin: 0;
+}

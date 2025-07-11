@@ -1,0 +1,119 @@
+.chill2-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.9), rgba(46, 125, 50, 0.8));
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  left: 50px;
+  width: 400px;    /* Ancho del componente */
+  height: 664px;   /* Altura del componente */
+  position: relative;
+  overflow: hidden;
+}
+
+.expenses-header {
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.expenses-title {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.expenses-title:first-child {
+  font-size: 48px;
+  margin-bottom: 4px;
+}
+
+.expenses-title:nth-child(2) {
+  font-size: 36px;
+  opacity: 0.7;
+  margin-bottom: 16px;
+}
+
+.expenses-date {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+  opacity: 0.8;
+}
+
+.expenses-subtitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Elemento decorativo circular */
+.chill2-list::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, rgba(66, 66, 66, 0.6), rgba(33, 33, 33, 0.8));
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  filter: blur(1px);
+}
+
+/* Elemento decorativo adicional */
+.chill2-list::after {
+  content: '';
+  position: absolute;
+  bottom: 80px;
+  right: 60px;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(66, 66, 66, 0.3), rgba(33, 33, 33, 0.5));
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .chill2-list {
+    /* MODIFICAR DIMENSIONES PARA MÓVILES AQUÍ */
+    width: 320px;    /* Ancho del componente en móviles */
+    height: 360px;   /* Altura del componente en móviles */
+    padding: 24px;
+  }
+  
+  .expenses-title:first-child {
+    font-size: 40px;
+  }
+  
+  .expenses-title:nth-child(2) {
+    font-size: 28px;
+  }
+  
+  .chill2-list::before {
+    width: 100px;
+    height: 100px;
+    right: 24px;
+  }
+  
+  .chill2-list::after {
+    width: 60px;
+    height: 60px;
+    right: 40px;
+  }
+}
