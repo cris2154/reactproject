@@ -29,3 +29,21 @@
   transform: scale(1.15);
   color: #ef4444;                        /* Rojo más intenso al pasar */
 }
+
+@media (max-width: 700px) {
+  .expense-item {
+    font-size: 0.85rem;
+    padding: 0.7rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.7rem;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .expense-item .delete-btn {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+  }
+}
