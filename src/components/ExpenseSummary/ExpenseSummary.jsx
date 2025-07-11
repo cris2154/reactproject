@@ -14,7 +14,7 @@ const ExpenseSummary = ({ total }) => {
           duration: 1.2,
           ease: "circOut",
           onUpdate: (latest) => {
-            amountRef.current.textContent = `$${Math.round(latest)}`;
+            amountRef.current.textContent = `$${latest.toFixed(2)}`;
           },
         }
       );
